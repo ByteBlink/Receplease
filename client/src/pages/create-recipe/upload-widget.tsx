@@ -1,13 +1,6 @@
 import React, { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { FormState } from './form-details';
-// import { Window } from '../../../Types/global';
-
-// declare global {
-//   interface Window {
-//     cloudinary: any;
-//   }
-// }
 
 interface UploadWidgetProps {
   setState: React.Dispatch<React.SetStateAction<FormState>>;
@@ -43,7 +36,6 @@ const UploadWidget: React.FC<UploadWidgetProps> = ({ setState }) => {
           }
         );
 
-       // return widgetRef.current;
       } else {
         console.error('Cloudinary SDK not loaded');
       }

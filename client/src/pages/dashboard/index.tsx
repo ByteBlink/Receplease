@@ -36,7 +36,7 @@ const Dashboard: FC = () => {
       addRecipes(res.data);
     }
     getRecipesArr(userID);
-  }, []);
+  }, [addRecipes, userID]);
 
   // RENDER:
   return (

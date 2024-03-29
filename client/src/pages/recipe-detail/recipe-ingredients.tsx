@@ -11,8 +11,8 @@ function RecipeIngredients({ recipeDetail }: { recipeDetail: Recipe }) {
 
   // FUNCTIONS:
   async function handleFavourite() {
-    const res = await toggleFavouritedBy(recipeDetail._id, userID); // recipeID and userID coming 'impurely' from outer scope...
-    updateOneRecipe(res); // Updates the Zustand recipes array to reflect favourite status
+    const res = await toggleFavouritedBy(recipeDetail._id, userID); 
+    updateOneRecipe(res); 
   }
 
   // RENDER:

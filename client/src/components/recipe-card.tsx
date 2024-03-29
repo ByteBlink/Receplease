@@ -25,13 +25,13 @@ const RecipeCard: React.FC<RecipeCardProps> = ({recipe}) => {
 
   // FUNCTIONS:
   async function handleFavourite() {
-    const res = await toggleFavouritedBy(recipe._id, userID); // recipeID and userID coming 'impurely' from outer scope...
-    updateOneRecipe(res); // Updates the Zustand recipes array to reflect favourite status
+    const res = await toggleFavouritedBy(recipe._id, userID); 
+    updateOneRecipe(res); 
   }
 
   async function handleDelete(userId: string, recipeId: string) {
     await deleteRecipe(userId, recipeId);
-    removeOneRecipe(recipeId); // Update the Zustand recipes array to remove the recipe
+    removeOneRecipe(recipeId); 
   }
 
   // RENDER:
@@ -43,7 +43,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({recipe}) => {
         className="recipe-card-img"
         onClick={() => {
           navigate(`/recipe-detail/${recipe._id}`);
-          updateFilteredCategory("All Recipes"); // Updates the Zustand filteredCategory value
+          updateFilteredCategory("All Recipes"); 
         }}
       />
       <div className="recipe-details">

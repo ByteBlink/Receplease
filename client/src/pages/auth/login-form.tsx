@@ -75,9 +75,6 @@ const LogInForm: React.FC = () => {
         handleError(message);
       }
     } catch (error) {
-      // Assuming 'error' is an instance of an Error and it contains a response object.
-      //const serverMessage = error.response?.data?.message; // Adjust based on how your HTTP client structures error objects
-     // handleError(serverMessage || 'Username or password is incorrect..');
       console.error(error);
     }
   };
